@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import SimpleAPIView
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('api/simple/', SimpleAPIView.as_view(), name='simple-api'),
 ]
