@@ -1,13 +1,13 @@
-package manejador_solicitudes.solicitudes;
+package com.example.request_manager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SolicitudesApplication {
+public class RequestManagerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SolicitudesApplication.class, args);
+		SpringApplication.run(RequestManagerApplication.class, args);
 	}
 
 }
