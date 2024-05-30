@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de los Alpes</title>
+</head>
+<body>
+    <h1>Banco de los Alpes</h1>
+
+    <h2>Microservicio 1</h2>
+    <form action="{% url 'microservicio1' %}" method="post">
+        {% csrf_token %}
+        <label for="data-ms1">Datos para Microservicio 1:</label>
+        <input type="text" id="data-ms1" name="data_ms1">
+        <button type="submit">Enviar Solicitud</button>
+    </form>
+    <div id="response-ms1"></div>
+
+    <h2>Microservicio 2</h2>
+    <form action="{% url 'microservicio2' %}" method="post">
+        {% csrf_token %}
+        <label for="data-ms2">Datos para Microservicio 2:</label>
+        <input type="text" id="data-ms2" name="data_ms2">
+        <button type="submit">Enviar Solicitud</button>
+    </form>
+    <div id="response-ms2"></div>
+
+    <h2>Microservicio 3</h2>
+    <form action="{% url 'microservicio3' %}" method="post">
+        {% csrf_token %}
+        <label for="data-ms3">Datos para Microservicio 3:</label>
+        <input type="text" id="data-ms3" name="data_ms3">
+        <button type="submit">Enviar Solicitud</button>
+    </form>
+    <div id="response-ms3"></div>
+</body>
+</html>
