@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import SimpleAPIView
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('api/simple/', SimpleAPIView.as_view(), name='simple-api'),
+    path('get_usuario/<str:parameter_value>/', SimpleAPIView.get_usuario, name = 'get_usuario'),
+    path('get_usuarios/', SimpleAPIView.get_lista_usuarios, name = 'get_lista_usuarios'),
+    path('update_usuario/', SimpleAPIView.actualiar_usuario, name = 'update_usuario'),
+    path('crear_usuario/', SimpleAPIView.crear_usuario, name='crear_usuario'),
 ]
